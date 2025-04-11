@@ -6,22 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="title">Let's Play Rock, Paper, Scissors!</div><br>
-    <div id="btns">
-        <button class="btn" id="rock" title="rock">Rock</button>
-        <button class="btn" id="paper" title="paper">Paper</button>
-        <button class="btn" id="scissors" title="scissors">Scissors</button>
+    <div id="game-content">
+        <div id="title" class="text"><b>Let's Play Rock, Paper, Scissors!</b></div><br>
+        <p>Best of five rounds wins</p>
+        <div id="game-body">
+            <div id="btns">
+                <button class="btn" id="rock" title="rock">Rock</button>
+                <button class="btn" id="paper" title="paper">Paper</button>
+                <button class="btn" id="scissors" title="scissors">Scissors</button>
+            </div>
+            <div id="round-number" class="text"></div>
+            <div id="choices">
+                <div id="you-chose" class="text"></div>
+                <div id="computer-chose" class="text"></div>
+            </div>
+            <div id="round-winner" class="text"></div>
+            <div id="scores">
+                <div id="human-score-display" class="text"></div>
+                <div id="comp-score-display" class="text"></div>
+            </div>
+            <div id="winner-display" class="text"></div>
+            <div id="refresh" class="text"></div>
+        </div>
     </div>
-    <div id="results">
-        <div id="score"></div>
-        <div id="winner"></div>
-    </div>
+    
 
-
-
-
-
-    <!--     <script src="script.js"></script>  -->
     <script src="script.js"></script>
 
 </body>
