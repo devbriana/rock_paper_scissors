@@ -1,11 +1,3 @@
-// since last commit: 
-// changed console.logs into DOM methods - game functions correctly
-// started styling page through javaScript
-
-
-
-
-
 let computerChoice;
 let humanChoice;
 
@@ -17,21 +9,21 @@ var roundLimit = 5;
 
 // variables for rock paper scissors choices
 var allBtn = document.querySelectorAll('.btn');
-// variables for text output of page title, choices, scores, and winner.
+// variables for text output of page: title, round, choices, round winner, scores, and winner.
 var title = document.getElementById('title')
 var roundNumber = document.getElementById('round-number');
 var youChose = document.getElementById('you-chose');
 var computerChose = document.getElementById('computer-chose');
+var roundWinner = document.getElementById('round-winner');
 var humanScoreDisplay = document.getElementById('human-score-display');
 var compScoreDisplay = document.getElementById('comp-score-display');
-var roundWinner = document.getElementById('round-winner');
 var winnerDisplay = document.getElementById('winner-display');
 var refresh = document.getElementById('refresh');
-// variable for all divs in one div (to style/align game)
+// variables to style game
 var gameContent = document.getElementById('game-content');
+var gameBody = document.getElementById('game-body');
 var divs = document.querySelectorAll('div');
 var text = document.querySelectorAll('.text');
-var gameBody = document.getElementById('game-body');
 var choicesDiv = document.getElementById('choices');
 var scoresDiv = document.getElementById('scores');
 var directions = document.querySelector('p');
@@ -123,10 +115,11 @@ function playRound(humanChoice, computerChoice) {
 }
     
 
-// styling 
+
+
+// Styling 
 document.body.style.display = "flex";
 document.body.style.justifyContent = "center";
-//document.body.style.alignItems = "center";  // Centers vertically
 document.body.style.height = "60vh";
 document.body.style.backgroundColor = "#1f1f1f";
 
@@ -139,14 +132,32 @@ gameBody.style.alignItems = "center";
 gameBody.style.justifyContent = "center";
 gameBody.style.marginTop = "28px";
 
-text.forEach((one) => {
-    one.style.color = "#89bc59";
-})
-
 divs.forEach((div) => {
     div.style.padding = "10px";
 })
 
+// Color for all text
+text.forEach((one) => {
+    one.style.color = "#89bc59";
+})
+
+// Title styling
+title.style.fontSize = "40px";
+title.style.fontFamily = "Georgia";
+title.style.position = "absolute";
+title.style.marginTop = "40px";
+
+// directions under title styling
+directions.style.marginTop = "100px";
+directions.style.color = "white";
+
+
+// Round number
+roundNumber.style.textDecoration = "underline";
+roundNumber.style.fontSize = "25px";
+roundNumber.style.marginTop = "20px";
+
+// Buttons
 allBtn.forEach((button) => {
     button.style.width = "150px";  
     button.style.height = "50px";  
@@ -158,12 +169,7 @@ allBtn.forEach((button) => {
     button.style.fontFamily = "Verdana";
 });
 
-roundNumber.style.textDecoration = "underline";
-roundNumber.style.fontSize = "25px";
-roundNumber.style.marginTop = "20px";
-
-
-
+// Choices
 choicesDiv.style.display = "flex";
 youChose.style.marginRight = "70px";
 computerChose.style.marginLeft = "70px";
@@ -171,20 +177,15 @@ youChose.style.color = "#edda4c";
 computerChose.style.color = "#eda24c";
 choicesDiv.style.fontSize = "20px";
 
+// Round Winner
 roundWinner.style.fontSize = "30px";
 
+// Scores
 scoresDiv.style.display = "flex";
 humanScoreDisplay.style.marginRight = "10px";
 compScoreDisplay.style.marginLeft = "10px";
 humanScoreDisplay.style.color = "#898a7f";
 compScoreDisplay.style.color = "#898a7f";
 
+//Winner Display
 winnerDisplay.style.fontSize = "40px";
-
-title.style.fontSize = "40px";
-title.style.fontFamily = "Georgia";
-title.style.position = "absolute";
-title.style.marginTop = "40px";
-
-directions.style.marginTop = "130px";
-directions.style.color = "white";
